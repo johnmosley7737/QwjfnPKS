@@ -2,14 +2,11 @@ import glob
 
 src_files = glob.glob("./goal_src/**/*.g[cs]", recursive=True)
 
-# Find how many of each have been started
-
 src_files_started = 0
 src_files_finished = 0
 data_files_started = 0
 
 for f in src_files:
-  with open(f, "r") as temp_file:
     lines = temp_file.readlines()
     line_count = len(lines)
     if line_count > 7:
